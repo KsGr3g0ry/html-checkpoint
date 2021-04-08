@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { Button, Form, Navbar, Nav, FormControl } from 'react-bootstrap';
+import { Button, Form, Navbar, Nav, FormControl, Col } from 'react-bootstrap';
 import { Component } from 'react';
 
 
@@ -22,18 +22,24 @@ class App extends Component{
             </Form>
           </Navbar>
         </div>
-        <h2>Login</h2>
-        <Form>
+        <h2 class="text-center m-4">Login</h2>
+        <div>
+        <Form className="d-flex justify-content-center">
+        <Col xs="auto">
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email:</Form.Label>
-            <Form.Control type="email"/>
+            <Form.Control className="input-sm" type="email" placeholder="Enter email"/>
           </Form.Group>
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password:</Form.Label>
-            <Form.Control type="password"/>
-          </Form.Group>
+            <Form.Group controlId="formBasicPassword">
+              <Form.Label>Password:</Form.Label>
+              <Form.Control className="input-sm" type="password" placeholder="Password"/>
+            </Form.Group>
           <Button color="primary">Submit</Button>
-        </Form>
+        </Col>
+          
+      </Form>
+        </div>
+      
     </div>
     )
   }
